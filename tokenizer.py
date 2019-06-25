@@ -136,7 +136,7 @@ def _read_filepattern(filepattern, max_lines=None, split_on_newlines=True):
     with tf.gfile.Open(filename) as f:
       if split_on_newlines:
         for line in f:
-          yield line.strip()
+          yield line.lower().strip()
           lines_read += 1
           if max_lines and lines_read >= max_lines:
             return
