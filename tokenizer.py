@@ -59,7 +59,7 @@ _native_to_unicode = (lambda s: s.decode("utf-8")) if six.PY2 else (lambda s: s)
 
 # This set contains all letter and number characters.
 _ALPHANUMERIC_CHAR_SET = set(
-    six.unichr(i) for i in range(sys.maxunicode)
+    six.unichr(i) for i in range(2048)
     if (unicodedata.category(six.unichr(i)).startswith("L") or
         unicodedata.category(six.unichr(i)).startswith("N")))
 
