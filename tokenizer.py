@@ -140,7 +140,7 @@ def _read_filepattern(filepattern, max_lines=None, split_on_newlines=True):
           lines_read += 1
           if max_lines and lines_read >= max_lines:
             return
-          if lines_read % 100000 == 0:
+          if lines_read % 1000000 == 0:
             print("read", lines_read, "lines,", time.time() - start, "secs elapsed")
 
       else:
